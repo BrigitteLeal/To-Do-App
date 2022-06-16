@@ -1,0 +1,15 @@
+button {
+    margin-top: 40px;
+    position: absolute;
+    right: 15px;
+    border: none;
+    background-color: transparent;
+}
+.buttonAdd {
+    font-size: 4.5rem;
+    color: var(--icons);
+}
+button:hover {
+    cursor: pointer;
+    transform: rotate(180deg);
+}

@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Header } from './Header';
+import { TodoCounter } from './TodoCounter';
+import { TodoSearch } from './TodoSearch';
+import { TodoList } from './TodoList';
+import { TodoItem } from './TodoItem';
+import { CreateTodoButton } from './CreateTodoButtom';
+// import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const todos = [
+  { text: 'Cortar cebolla', completed: false},
+  { text: 'Pelar papa', completed: true},
+  { text: 'Hervir brocoli', completed: false},
+]
+
+const App = () => { // creación de componentes por convención inician con mayuscula
+  return ( 
+    <React.Fragment>
+      <Header />
+      <TodoCounter />
+      <TodoSearch />
+      <TodoList>
+        {todos.map(todo => (
+          <TodoItem  
+            key={todo.text} 
+            text={todo.text} 
+            completed={todo.completed}
+          />))}
+      </TodoList>
+      <CreateTodoButton />
+    </React.Fragment>
   );
 }
 
 export default App;
+
