@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render( // ReactDOM está renderizando componente llamado App
-    <App />,
-  document.getElementById('root')
+    <App />, // componente principal a renderizar
+  document.getElementById('root') //  será la raíz de nuestro proyecto, y la usaremos para empezar a construir con JavaScript:
 );
 

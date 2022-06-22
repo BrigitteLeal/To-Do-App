@@ -1,7 +1,8 @@
 button {
     margin-top: 40px;
-    position: absolute;
-    right: 15px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
     border: none;
     background-color: transparent;
 }
