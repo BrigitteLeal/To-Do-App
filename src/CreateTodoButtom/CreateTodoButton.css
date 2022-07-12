@@ -1,8 +1,9 @@
-button {
+.mainBtn {
     margin-top: 40px;
     position: fixed;
     bottom: 24px;
     right: 24px;
+    z-index: 1;
     border: none;
     background-color: transparent;
 }
@@ -10,7 +11,12 @@ button {
     font-size: 4.5rem;
     color: var(--icons);
 }
-button:hover {
+.mainBtn:hover {
     cursor: pointer;
     transform: rotate(180deg);
+}
+
+.buttonClose {
+    cursor: pointer;
+    transform: rotate(45deg);
 }

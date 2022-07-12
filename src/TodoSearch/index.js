@@ -1,10 +1,11 @@
 import React from 'react';
 import './TodoSearch.css'
 import { FaSearch } from "react-icons/fa";
+import { TodoContext } from '../TodoContext';
 
 // COMPONENTE ENCARGADO DE PERMITIR LA BUSQUEDA DE TO DOS
-const TodoSearch = ({ searchValue, setSearchValue }) => { // las props que se reciben son los elementos creados en App un useState
-
+const TodoSearch = () => {
+    const { searchValue, setSearchValue } = React.useContext(TodoContext);
     const onSearchValueChange = (event) => { // función que permite obtener el valor del input a partir del evento (reacción que hizo el usuario)
         console.log(event.target.value); 
         setSearchValue(event.target.value); //event: teclear, target: en el input, value: x valor ej "cebolla". Se actualiza el estado con el valor del input

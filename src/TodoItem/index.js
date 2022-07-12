@@ -7,11 +7,11 @@ import { FaTrash } from "react-icons/fa";
 const TodoItem = (props) => {
     return (
         <li className="TodoItem">
-            <span className="Icon" onClick={ props.onComplete }>
+            <span className="Icon IconContainer" onClick={ props.onComplete }>
                 < AiFillCheckCircle className={`Icon-check ${props.completed && 'Icon-check--active'}`}/> 
                 {/* condicional, si el componente capta que la props completed es true (!false, undefinited, null, []) se añade la clase Icon-check--active al elemento  */}
             </span>
-            <p className={`TodoItem-p ${props.completed &&'TodoItem-p--complete'}`}>{ props.text }</p>
+            <div className={`TodoItem-p ${props.completed &&'TodoItem-p--complete'}`}> { props.text } </div>
             <span className="Icon IconContainer" onClick={ props.onDelete }>
                 <FaTrash className="Icon-delete"/>
             </span>

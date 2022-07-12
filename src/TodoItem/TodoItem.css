@@ -10,41 +10,39 @@
     font-size: 3rem;
     color: var(--icons);
 }
+.Icon-check:hover{
+    opacity: 0.7;
+}
 .Icon-check--active {
-    color: green;
+    color: #7bd07b;
 }
 /* TASK */
 .TodoItem-p {
     width: 230px;
-    height: 30px;
+    min-height: 30px;
     margin: 0;
-    padding-left: 7px;
+    padding: 3px 7px;
     display: flex;
     align-items: center;
     font-size: 1.2rem;
     background-color: white;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
 }
 .TodoItem-p--complete {
     text-decoration: line-through;
 }
 /* ICON DELETE */
-.IconContainer  {
-    width: 30px;
-    height: 30px;
+.IconContainer {
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: white;
-    border-radius: 0 10px 10px 0;
-
 }
 .Icon-delete {
+    margin-left: 5px;
     font-size: 2rem;
     color: var(--icons);
 }
 .Icon-delete:hover {
-    color: red;
+    color: #f38282;
 }
 .Icon:hover {
     cursor: pointer;
